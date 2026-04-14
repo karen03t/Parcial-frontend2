@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 20px;
+    color: #1f2933;
+}
+
+#contenedor-principal {
+    max-width: 900px;
+    margin: auto;
+}
+
+header {
+    background: linear-gradient(180deg, #ffffff 0%, #b7e5f1 100%);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px dashed #0c0404;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    color: #140a80;
+}
+
+#ubicacion {
+    margin-top: 12px;
+}
+
+#ubicacion iframe {
+    width: 100%;
+    max-width: 500px;
+    height: 260px;
+    border: 1px solid #d7dde5;
+    border-radius: 8px;
+}
+
+#entrada-datos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 10px;
+    width: 280px;
+    border: 1px solid #d7dde5;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 14px;
+    background-color: #5ca1b8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+#tablero-kanban {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.zona-drop {
+    flex: 1;
+    min-height: 260px;
+    background: linear-gradient(180deg, #ffffff 0%, #bae4f3 100%);
+    border: 2px dashed #0c0404;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.zona-drop h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #1976d2;
+    text-align: left;
+}
+
+.tarjeta small {
+    color: #5f6c7b;
+    font-size: 12px;
+}
+
+#seccion-visual {
+    background: linear-gradient(180deg, #ffffff 0%, #b7e5f1 100%);
+    border: 2px dashed #0c0404;
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+}
+
+#seccion-visual h3 {
+    margin-top: 0;
+}
+
+#grafico {
+    background-color: white;
+    border: 1px solid #d7dde5;
+    margin: 8px auto 0;
+    border-radius: 8px;
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    height: 150px;
+}
+
+#controles-borrado {
+    margin-top: 12px;
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    #tablero-kanban {
+        flex-direction: column;
+    }
+
+    #controles-borrado {
+        text-align: center;
+    }
+
+    #ubicacion iframe {
+        height: 220px;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Inteligente - Grupo 8</title>
+    <link rel="stylesheet" href="style..css">
+</head>
+<body onload="comenzar()">
+    <div id="contenedor-principal">
+        <header>
+            <h1>Agenda Inteligente</h1>
+            <div id="ubicacion" aria-live="polite"></div>
+        </header>
+
+        <section id="entrada-datos">
+            <input type="text" id="nombre-evento" placeholder="Nombre de la tarea" maxlength="40" aria-label="Nombre de la tarea">
+            <button id="btn-agregar">Agregar Tarea</button>
+        </section>
+
+        <main id="tablero-kanban">
+            <div id="pendientes" class="zona-drop" ondragover="permitirDrop(event)" ondrop="soltar(event)">
+                <h3>Pendientes</h3>
+                <div id="lista-pendientes"></div>
+            </div>
+
+            <div id="hoy" class="zona-drop" ondragover="permitirDrop(event)" ondrop="soltar(event)">
+                <h3>Realizadas</h3>
+                <div id="lista-hoy"></div>
+            </div>
+        </main>
+
+        <section id="seccion-visual">
+            <h3>Estadisticas de Tareas</h3>
+            <canvas id="grafico" width="400" height="150"></canvas>
+            <div id="controles-borrado">
+                <button onclick="borrarTodo()">Limpiar Todo</button>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
